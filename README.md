@@ -66,7 +66,29 @@ For convenience, you can install AutoFix globally:
 
 1. **Create a Scripts folder** in permanent storage (e.g., `C:\Scripts\` or `D:\Scripts\`)
 2. **Download autofix.py** to this folder
-3. **Add the folder to your PATH** environment variable
+3. **Create autofix.bat** in the same Scripts folder
+4. **Add the folder to your PATH** environment variable
+
+#### Step-by-Step Commands:
+
+```powershell
+# 1. Create Scripts directory
+mkdir C:\Scripts or D:\Scripts
+
+# 2. Download autofix.py
+Invoke-WebRequest https://raw.githubusercontent.com/ATIFSHAH159/Autofix-CLI-Development-Challenge-Hackathon/main/autofix.py -OutFile C:\Scripts\autofix.py or D:\Scripts\autofix.py
+# 3. Create autofix.bat wrapper
+@"
+@echo off
+python C:\Scripts\autofix.py %*
+"@ | Out-File -FilePath C:\Scripts\autofix.bat -Encoding ASCII
+
+# 4. Add to PATH (run as Administrator)
+#### Manual PATH Setup:
+1. Open **System Properties** → **Environment Variables**
+2. Under **User variables**, select **Path** and click **Edit**
+3. Click **New** and add `C:\Scripts` (or your chosen path)
+4. Click **OK** to save
 
 ![Environment Variable Setup](Screenshots/EnvirnomentVariable.png)
 
