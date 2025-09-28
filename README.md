@@ -72,18 +72,26 @@ For convenience, you can install AutoFix globally:
 #### Step-by-Step Commands:
 
 ```powershell
-# 1. Create Scripts directory
-mkdir C:\Scripts or D:\Scripts
+# 1. Create Scripts directory (choose C: or D:)
+mkdir C:\Scripts
+# OR
+mkdir D:\Scripts
 
-# 2. Download autofix.py
-Invoke-WebRequest https://raw.githubusercontent.com/ATIFSHAH159/Autofix-CLI-Development-Challenge-Hackathon/main/autofix.py -OutFile C:\Scripts\autofix.py or D:\Scripts\autofix.py
-# 3. Create autofix.bat wrapper
+# 2. Download autofix.py to your chosen directory
+Invoke-WebRequest https://raw.githubusercontent.com/ATIFSHAH159/Autofix-CLI-Development-Challenge-Hackathon/main/autofix.py -OutFile C:\Scripts\autofix.py
+# OR
+Invoke-WebRequest https://raw.githubusercontent.com/ATIFSHAH159/Autofix-CLI-Development-Challenge-Hackathon/main/autofix.py -OutFile D:\Scripts\autofix.py
+
+# 3. Create autofix.bat wrapper (adjust path as needed)
 @"
 @echo off
 python C:\Scripts\autofix.py %*
 "@ | Out-File -FilePath C:\Scripts\autofix.bat -Encoding ASCII
 
 # 4. Add to PATH (run as Administrator)
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Scripts", "User")
+```
+
 #### Manual PATH Setup:
 1. Open **System Properties** → **Environment Variables**
 2. Under **User variables**, select **Path** and click **Edit**
@@ -100,11 +108,22 @@ After setup, you can run `autofix` from anywhere on your system!
 
 ## 🧑‍💻 Example Workflows
 
+> **Note**: After global installation, you can simply run `autofix` from any project directory!
+
 ### 🐍 Python Project
+
+#### Manual Method (Download script each time):
 ```bash
 cd my-python-project/
 python autofix.py
 ```
+
+#### Global Method (Recommended):
+```bash
+cd my-python-project/
+autofix
+```
+
 **What it does:**
 - ✅ Creates `.venv` virtual environment
 - ✅ Installs dependencies from `requirements.txt` or `pyproject.toml`
@@ -112,10 +131,19 @@ python autofix.py
 - ✅ Formats code with Black & Ruff
 
 ### 📦 Node.js Project
+
+#### Manual Method:
 ```bash
 cd my-react-app/
 python autofix.py
 ```
+
+#### Global Method (Recommended):
+```bash
+cd my-react-app/
+autofix
+```
+
 **What it does:**
 - ✅ Detects pnpm from `pnpm-lock.yaml`
 - ✅ Runs `pnpm install`
@@ -123,30 +151,57 @@ python autofix.py
 - ✅ Configures dev environment
 
 ### 🔄 Multi-Language Project (Python + Node.js)
+
+#### Manual Method:
 ```bash
 cd fullstack-app/
 python autofix.py
 ```
+
+#### Global Method (Recommended):
+```bash
+cd fullstack-app/
+autofix
+```
+
 **What it does:**
 - ✅ Detects Python backend + Node.js frontend
 - ✅ Sets up both environments intelligently
 - ✅ Configures all necessary tooling
 
 ### 🦀 Rust Project
+
+#### Manual Method:
 ```bash
 cd my-rust-app/
 python autofix.py
 ```
+
+#### Global Method (Recommended):
+```bash
+cd my-rust-app/
+autofix
+```
+
 **What it does:**
 - ✅ Detects `Cargo.toml`
 - ✅ Runs `cargo build` / installs dependencies
 - ✅ Configures Rust development environment
 
 ### 📱 Flutter Project
+
+#### Manual Method:
 ```bash
 cd my-flutter-app/
 python autofix.py
 ```
+
+#### Global Method (Recommended):
+```bash
+cd my-flutter-app/
+autofix
+```
+
 **What it does:**
 - ✅ Detects Flutter project from `pubspec.yaml`
 - ✅ Runs `flutter pub get`
