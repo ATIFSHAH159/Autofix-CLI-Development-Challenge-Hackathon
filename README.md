@@ -12,21 +12,21 @@
 
 Every time developers clone a new repository, they face the same frustrating ritual:
 
-- 🤔 **Which package manager do I use?** (npm, yarn, pnpm?)
-- 🐍 **Do I need a Python virtual environment?**
-- 📋 **What's the right sequence of commands?**
-- 😤 **Why won't the dependencies install?**
-- 🔍 **What tools are already configured?**
-- ⚙️ **How do I set up the development environment?**
-- 🐛 **Why is my setup different from the team?**
+- **Which package manager do I use?** (npm, yarn, pnpm?)
+- **Do I need a Python virtual environment?**
+- **What's the right sequence of commands?**
+- **Why won't the dependencies install?**
+- **What tools are already configured?**
+- **How do I set up the development environment?**
+- **Why is my setup different from the team?**
 
 This results in:
-- ⏰ **20+ minutes of wasted setup time per project**
-- 🔄 **Constant context switching between tools**
-- 🐛 **Inconsistent environments causing mysterious bugs**
-- 😫 **Frustration and productivity loss**
-- 📚 **Time spent reading documentation instead of coding**
-- 🔧 **Manual configuration of linters, formatters, and hooks**
+- **20+ minutes of wasted setup time per project**
+- **Constant context switching between tools**
+- **Inconsistent environments causing mysterious bugs**
+- **Frustration and productivity loss**
+- **Time spent reading documentation instead of coding**
+- **Manual configuration of linters, formatters, and hooks**
 
 ---
 
@@ -35,14 +35,14 @@ This results in:
 **AutoFix** is a revolutionary Python script that automatically detects your project type and sets up the perfect development environment with **zero configuration**.
 
 ### 🎯 What AutoFix Does:
-- 🔍 **Intelligent Detection**: Automatically identifies Python, Node.js, Rust, and Flutter projects
-- 🚀 **One-Command Setup**: Single command sets up everything you need
-- 🔧 **Smart Package Management**: Chooses the right package manager (npm, yarn, pnpm, pip, cargo)
-- ✨ **Code Formatting**: Automatically configures and runs formatters (Black, Prettier, Ruff)
-- 🔗 **Git Integration**: Sets up pre-commit hooks and development tools
-- 🪟 **Cross-Platform**: Works seamlessly on Windows, macOS, and Linux
+- **Intelligent Detection**: Automatically identifies Python, Node.js, Rust, and Flutter projects
+- **One-Command Setup**: Single command sets up everything you need
+- **Smart Package Management**: Chooses the right package manager (npm, yarn, pnpm, pip, cargo)
+- **Code Formatting**: Automatically configures and runs formatters (Black, Prettier, Ruff)
+- **Git Integration**: Sets up pre-commit hooks and development tools
+- **Cross-Platform**: Works seamlessly on Windows, macOS, and Linux
 
-> 💡 **One command. Every environment. Zero friction. Maximum productivity.**
+> **One command. Every environment. Zero friction. Maximum productivity.**
 
 ---
 
@@ -258,15 +258,15 @@ autofix
 
 ## 🎯 Features
 
-- 🔍 **Smart Detection**: Automatically identifies project types
-- 🚀 **Zero Configuration**: Works out of the box
-- 🔧 **Multi-Language Support**: Python, Node.js, Rust, Flutter
-- 📦 **Package Manager Detection**: Automatically chooses the right tool
-- ✨ **Code Formatting**: Sets up and runs formatters
-- 🔗 **Git Hooks**: Configures pre-commit hooks
-- 🪟 **Cross-Platform**: Windows, macOS, Linux support
-- 📊 **Verbose Mode**: Detailed output with `-v` flag
-- 🧪 **Dry Run**: Test without executing with `-n` flag
+- **Smart Detection**: Automatically identifies project types
+- **Zero Configuration**: Works out of the box
+- **Multi-Language Support**: Python, Node.js, Rust, Flutter
+- **Package Manager Detection**: Automatically chooses the right tool
+- **Code Formatting**: Sets up and runs formatters
+- **Git Hooks**: Configures pre-commit hooks
+- **Cross-Platform**: Windows, macOS, Linux support
+- **Verbose Mode**: Detailed output with `-v` flag
+- **Dry Run**: Test without executing with `-n` flag
 
 ---
 
@@ -290,10 +290,10 @@ git clone https://github.com/YOUR_USERNAME/Autofix-CLI-Development-Challenge-Hac
 cd Autofix-CLI-Development-Challenge-Hackathon
 
 # Test the script
-python autofix.py -v
+python autofix.py 
 
 # Run tests with different project types
-python autofix.py -n  # Test in a sample project
+python autofix.py  # Test in a sample project
 ```
 
 ### 🎯 Areas for Contribution
