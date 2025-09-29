@@ -128,6 +128,80 @@ After setup, you can run `autofix` from anywhere on your system!
 
 ---
 
+## 🔧 Advanced Usage
+
+AutoFix provides several command-line options for different use cases and debugging scenarios.
+
+### Command Options
+
+#### Manual Method (Download script each time):
+```bash
+# See what would happen without executing
+python autofix.py --dry-run
+
+# Verbose output for debugging
+python autofix.py --verbose
+
+# Get help
+python autofix.py --help
+```
+
+#### Global Method (After global installation):
+```bash
+# See what would happen without executing
+autofix --dry-run
+
+# Verbose output for debugging
+autofix --verbose
+
+# Get help
+autofix --help
+```
+
+### Option Details
+
+| Option | Description | Use Case |
+|--------|-------------|----------|
+| `--dry-run` | **Safe preview mode** - Shows exactly what AutoFix would do without making any changes | Perfect for testing AutoFix on new projects or verifying actions before execution |
+| `--verbose` | **Debug mode** - Shows detailed output of every step being executed | Ideal for troubleshooting setup issues or understanding AutoFix's decision-making process |
+| `--help` | **Information only** - Displays help information and exits immediately | Quick reference for available options and usage examples |
+
+### Screenshots
+
+#### Dry Run Mode
+![Dry Run Command](Screenshots/DryRun%20Command.png)
+*Preview mode shows exactly what AutoFix would do without making changes*
+
+#### Verbose Mode
+![Verbose Command](Screenshots/Verbose%20Command.png)
+*Debug mode provides detailed step-by-step execution information*
+
+#### Help Command
+![Help Command](Screenshots/HelpCommand.png)
+*Quick access to all available options and usage information*
+
+### When to Use Each Option
+
+**Use `--dry-run` when:**
+- Testing AutoFix on a new project type
+- Verifying AutoFix's detection logic
+- Showing team members what AutoFix will do
+- Debugging detection issues
+
+**Use `--verbose` when:**
+- Troubleshooting failed setups
+- Understanding AutoFix's decision process
+- Debugging package manager conflicts
+- Learning how AutoFix works internally
+
+**Use `--help` when:**
+- Forgetting available options
+- Quick reference during development
+- Onboarding new team members
+- Creating documentation or tutorials
+
+---
+
 ## 🧑‍💻 Example Workflows
 
 > **Note**: After global installation, you can simply run `autofix` from any project directory!
